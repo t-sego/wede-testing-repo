@@ -1,1 +1,754 @@
+ * {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+ }
 
+ html {
+     scroll-behavior: smooth;
+ }
+
+ body {
+     font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+     color: #232530;
+     background-color: #ffffff;
+     line-height: 1.6;
+ }
+
+ img {
+     max-width: 100%;
+     display: block;
+ }
+
+ a {
+     color: #4d5ea3;
+     text-decoration: none;
+ }
+
+ a:hover,
+ a:focus {
+     color: #38427a;
+     text-decoration: underline;
+
+
+ }
+
+ h1,
+ h2,
+ h3,
+ h4 {
+     font-weight: 700;
+     line-height: 1.2;
+     margin-bottom: 16px;
+ }
+
+ h1 {
+     font-size: 2.4rem;
+ }
+
+ h2 {
+     font-size: 1.8rem;
+ }
+
+ h3 {
+     font-size: 1.2rem;
+ }
+
+ p {
+     margin-bottom: 16px;
+     color: #5f6373;
+ }
+
+ .eyebrow {
+     display: inline-block;
+     font-size: 0.75rem;
+     font-weight: 700;
+     letter-spacing: 0.08em;
+     text-transform: uppercase;
+     color: #4d5ea3;
+     margin-bottom: 8px;
+ }
+
+ .container {
+     max-width: 1100px;
+     margin-left: auto;
+     margin-right: auto;
+     padding-left: 16px;
+     padding-right: 16px;
+ }
+
+ .section {
+     padding-top: 64px;
+     padding-bottom: 64px;
+ }
+
+ .section-alt {
+     background-color: #f5f6fa;
+ }
+
+ .page-header {
+     text-align: center;
+     padding-top: 64px;
+     padding-bottom: 24px;
+ }
+
+ .page-header p {
+     max-width: 60ch;
+     margin-left: auto;
+     margin-right: auto;
+ }
+
+ .btn {
+     display: inline-flex;
+     align-items: center;
+     padding: 12px 24px;
+     border-radius: 8px;
+     font-weight: 700;
+     border: 2px solid transparent;
+     cursor: pointer;
+     transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+ }
+
+ .btn i {
+     margin-right: 6px;
+ }
+
+ .btn-primary {
+     background-color: #4d5ea3;
+     color: #ffffff;
+ }
+
+ .btn-primary:hover {
+     background-color: #38427a;
+ }
+
+ .btn-secondary {
+     background-color: transparent;
+     border-color: #4d5ea3;
+     color: #4d5ea3;
+ }
+
+ .btn-secondary:hover {
+     background-color: #4d5ea3;
+     color: #ffffff;
+ }
+
+ /* A light-outlined button, made specifically for sitting on top of a 
+   dark photo (you'll use this on the hero banner shortly), where a 
+   dark-text button would be hard to read against a photo. */
+ .btn-secondary-light {
+     background-color: transparent;
+     border-color: #ffffff;
+     color: #ffffff;
+ }
+
+ .btn-secondary-light:hover {
+     background-color: #ffffff;
+     color: #232530;
+ }
+
+ /* A green button, used for the "Send" button on both forms later in 
+   this tutorial. */
+ .btn-success {
+     background-color: #3fb87f;
+     color: #ffffff;
+ }
+
+ .btn-success:hover {
+     background-color: #2f9066;
+ }
+
+ .btn-block {
+     display: flex;
+     justify-content: center;
+     width: 100%;
+ }
+
+ .site-header {
+     border-bottom: 1px solid #dfe2ec;
+     position: sticky;
+     top: 0;
+     background-color: #ffffff;
+     z-index: 100;
+ }
+
+ .header-inner {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding-top: 16px;
+     padding-bottom: 16px;
+ }
+
+ .logo {
+     font-weight: 700;
+     font-size: 1.4rem;
+     color: #232530;
+ }
+
+ .main-nav ul {
+     list-style: none;
+     display: flex;
+     gap: 16px;
+ }
+
+ .main-nav a {
+     color: #232530;
+     font-weight: 600;
+     padding: 6px 4px;
+     border-bottom: 2px solid transparent;
+ }
+
+ .main-nav a:hover,
+ .main-nav a[aria-current="page"] {
+     color: #4d5ea3;
+     border-bottom-color: #4d5ea3;
+     text-decoration: none;
+ }
+
+ /* The checkbox itself is never visible — it only exists to hold the 
+   open/closed state. */
+ .nav-toggle-input {
+     position: absolute;
+     opacity: 0;
+     pointer-events: none;
+ }
+
+ /* The <label> is what the user actually sees and clicks. */
+ .nav-toggle {
+     display: none;
+     align-items: center;
+     justify-content: center;
+     width: 40px;
+     height: 40px;
+     border: 1px solid #dfe2ec;
+     border-radius: 8px;
+     color: #232530;
+     font-size: 1.2rem;
+     cursor: pointer;
+ }
+
+ /* Show only the "closed" (hamburger) icon by default... */
+ .nav-toggle .icon-close {
+     display: none;
+ }
+
+ /* ...then swap which icon is visible once the checkbox is checked. */
+ .nav-toggle-input:checked~.nav-toggle .icon-open {
+     display: none;
+ }
+
+ .nav-toggle-input:checked~.nav-toggle .icon-close {
+     display: inline-block;
+ }
+
+ .site-footer {
+     background-color: #232530;
+     color: #d7d9e4;
+     padding-top: 40px;
+     padding-bottom: 24px;
+ }
+
+ .footer-inner {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 40px;
+     justify-content: space-between;
+     margin-bottom: 24px;
+ }
+
+ .site-footer .logo {
+     color: #ffffff;
+ }
+
+ .site-footer a {
+     color: #d7d9e4;
+ }
+
+ .site-footer a:hover {
+     color: #e8a33d;
+ }
+
+ .footer-col h4 {
+     color: #ffffff;
+     font-size: 1rem;
+     margin-bottom: 8px;
+ }
+
+ .copyright {
+     border-top: 1px solid #3b3e4c;
+     padding-top: 16px;
+     text-align: center;
+     font-size: 0.85rem;
+     color: #9c9fb2;
+ }
+
+ .icon-list {
+     list-style: none;
+     margin-bottom: 16px;
+ }
+
+ .icon-list li {
+     display: flex;
+     align-items: flex-start;
+     gap: 10px;
+     margin-bottom: 8px;
+ }
+
+ .icon-list i {
+     color: #4d5ea3;
+     width: 16px;
+     text-align: center;
+     margin-top: 4px;
+     flex: none;
+ }
+
+ .social-list {
+     list-style: none;
+     display: flex;
+     flex-wrap: wrap;
+     gap: 8px;
+ }
+
+ .icon-btn {
+     display: inline-flex;
+     align-items: center;
+     justify-content: center;
+     width: 40px;
+     height: 40px;
+     border-radius: 50%;
+     border: 1px solid #dfe2ec;
+     color: #5f6373;
+     font-size: 1rem;
+ }
+
+ .icon-btn:hover,
+ .icon-btn:focus {
+     color: #4d5ea3;
+     border-color: #4d5ea3;
+     text-decoration: none;
+ }
+
+ .site-footer .icon-btn {
+     border-color: #4a4d5c;
+     color: #d7d9e4;
+ }
+
+ .site-footer .icon-btn:hover {
+     color: #e8a33d;
+     border-color: #e8a33d;
+ }
+
+ .hero-banner {
+     position: relative;
+     overflow: hidden;
+     border-radius: 8px;
+     margin-top: 40px;
+ }
+
+ .hero-photo {
+     width: 100%;
+     aspect-ratio: 5 / 2;
+     object-fit: cover;
+ }
+
+ .hero-overlay {
+     position: absolute;
+     inset: 0;
+     display: flex;
+     align-items: center;
+     background: linear-gradient(100deg,
+             rgba(35, 37, 48, 0.82) 0%,
+             rgba(35, 37, 48, 0.55) 45%,
+             rgba(35, 37, 48, 0.15) 100%);
+ }
+
+ .hero-content {
+     color: #ffffff;
+     padding: 40px;
+     max-width: 520px;
+ }
+
+ .hero-content .eyebrow {
+     color: #e8a33d;
+ }
+
+ .hero-content p {
+     color: rgba(255, 255, 255, 0.85);
+ }
+
+ .hero-buttons {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 16px;
+     margin-top: 16px;
+ }
+
+ .split {
+     display: flex;
+     flex-wrap: wrap;
+     align-items: center;
+     gap: 40px;
+ }
+
+ .split-image,
+ .split-text {
+     flex: 1 1 340px;
+ }
+
+ .split-image img {
+     border-radius: 8px;
+     width: 100%;
+     aspect-ratio: 4 / 3;
+     object-fit: cover;
+ }
+
+ /* Add this class alongside .split-image whenever the photo should 
+stay a perfect square instead of the usual 4:3 landscape crop — 
+used for the portrait photo on the About Us page. */
+ .split-image.is-square img {
+     aspect-ratio: 1 / 1;
+ }
+
+ .card-grid {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+     gap: 24px;
+     margin-top: 40px;
+ }
+
+ .grid-4 {
+     display: grid;
+     grid-template-columns: 1fr;
+     gap: 24px;
+     margin-top: 40px;
+ }
+
+ @media (min-width: 560px) {
+     .grid-4 {
+         grid-template-columns: repeat(2, 1fr);
+     }
+ }
+
+ @media (min-width: 900px) {
+     .grid-4 {
+         grid-template-columns: repeat(4, 1fr);
+     }
+ }
+
+ .card {
+     background-color: #ffffff;
+     border: 1px solid #dfe2ec;
+     border-radius: 8px;
+     padding: 24px;
+     min-height: 190px;
+     display: flex;
+     flex-direction: column;
+     transition: box-shadow 0.2s ease, transform 0.2s ease;
+ }
+
+ .card:hover {
+     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+     transform: translateY(-3px);
+ }
+
+ .card .card-icon {
+     font-size: 1.5rem;
+     color: #4d5ea3;
+     margin-bottom: 8px;
+ }
+
+ .card p {
+     margin-bottom: 0;
+     flex: 1;
+ }
+
+ .product-card {
+     border: 1px solid #dfe2ec;
+     border-radius: 8px;
+     overflow: hidden;
+     background-color: #ffffff;
+     display: flex;
+     flex-direction: column;
+ }
+
+ .product-image {
+     position: relative;
+ }
+
+ .product-image img {
+     width: 100%;
+     aspect-ratio: 1 / 1;
+     object-fit: cover;
+ }
+
+ .add-cart {
+     position: absolute;
+     top: 10px;
+     right: 10px;
+     display: inline-flex;
+     align-items: center;
+     gap: 4px;
+     background-color: #ffffff;
+     color: #232530;
+     font-size: 0.72rem;
+     font-weight: 700;
+     padding: 5px 10px;
+     border-radius: 999px;
+     border: 1px solid #dfe2ec;
+ }
+
+ .add-cart:hover {
+     color: #4d5ea3;
+     border-color: #4d5ea3;
+ }
+
+ .product-card-body {
+     padding: 16px;
+     display: flex;
+     flex-direction: column;
+     gap: 4px;
+ }
+
+ .product-meta {
+     display: flex;
+     justify-content: space-between;
+     font-size: 0.85rem;
+     color: #5f6373;
+ }
+
+ .visually-hidden {
+     position: absolute;
+     width: 1px;
+     height: 1px;
+     padding: 0;
+     margin: -1px;
+     overflow: hidden;
+     clip: rect(0, 0, 0, 0);
+     white-space: nowrap;
+     border: 0;
+ }
+
+ .search-pill {
+     position: relative;
+     max-width: 420px;
+     margin: 0 auto 40px;
+ }
+
+ .search-pill i {
+     position: absolute;
+     top: 50%;
+     left: 18px;
+     transform: translateY(-50%);
+     color: #5f6373;
+     pointer-events: none;
+ }
+
+ .search-pill input {
+     width: 100%;
+     padding: 12px 16px 12px 42px;
+     border: 1px solid #dfe2ec;
+     border-radius: 999px;
+     font: inherit;
+     background-color: #ffffff;
+ }
+
+ .search-pill input:focus {
+     border-color: #4d5ea3;
+ }
+
+ .form-layout {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 24px;
+     align-items: flex-start;
+ }
+
+ .form-card,
+ .info-card {
+     flex: 1 1 340px;
+     border: 1px solid #dfe2ec;
+     border-radius: 8px;
+     padding: 24px;
+ }
+
+ .form-card {
+     background-color: #f5f6fa;
+ }
+
+ .form-group {
+     margin-bottom: 16px;
+ }
+
+ .form-group label {
+     display: block;
+     font-weight: 600;
+     font-size: 0.9rem;
+     margin-bottom: 4px;
+ }
+
+ .form-group input,
+ .form-group select,
+ .form-group textarea {
+     width: 100%;
+     padding: 10px 12px;
+     border: 1px solid #dfe2ec;
+     border-radius: 8px;
+     font: inherit;
+     background-color: #ffffff;
+ }
+
+ .form-group input:focus,
+ .form-group select:focus,
+ .form-group textarea:focus {
+     border-color: #4d5ea3;
+ }
+
+ .form-row {
+     display: flex;
+     gap: 16px;
+     flex-wrap: wrap;
+ }
+
+ .form-row .form-group {
+     flex: 1 1 160px;
+ }
+
+ .faq-item {
+     border-bottom: 1px solid #dfe2ec;
+     padding: 16px 0;
+ }
+
+ .faq-item h3 {
+     font-size: 1rem;
+     margin-bottom: 6px;
+ }
+
+ .faq-item h3 i {
+     color: #4d5ea3;
+     margin-right: 6px;
+ }
+
+ .faq-item p {
+     margin-bottom: 0;
+ }
+
+ @media (max-width: 700px) {
+     .nav-toggle {
+         display: flex;
+     }
+
+     .main-nav {
+         display: none;
+         width: 100%;
+     }
+
+     .nav-toggle-input:checked~.main-nav {
+         display: block;
+     }
+
+     .main-nav ul {
+         flex-direction: column;
+         gap: 0;
+         padding-bottom: 16px;
+     }
+
+     .main-nav a {
+         display: block;
+         padding: 10px 4px;
+         border-bottom: 1px solid #dfe2ec;
+     }
+
+     .header-inner {
+         flex-wrap: wrap;
+     }
+
+     .hero-photo {
+         aspect-ratio: 4 / 3;
+     }
+
+     .hero-overlay {
+         background: linear-gradient(180deg,
+                 rgba(35, 37, 48, 0.35) 0%,
+                 rgba(35, 37, 48, 0.88) 100%);
+         align-items: flex-end;
+     }
+
+     .hero-content {
+         max-width: 100%;
+     }
+
+     h1 {
+         font-size: 1.9rem;
+     }
+
+     h2 {
+         font-size: 1.5rem;
+     }
+ }
+
+ @media (min-width: 560px) {
+     .grid-4 {
+         grid-template-columns: repeat(2, 1fr);
+     }
+ }
+
+ @media (min-width: 900px) {
+     .grid-4 {
+         grid-template-columns: repeat(4, 1fr);
+     }
+ }
+ /* ====================================================================== 
+   JAVASCRIPT HELPER CLASSES 
+   These rules do nothing until js/script.js adds or removes the class 
+   names below. JavaScript changes the CLASS; CSS decides the LOOK. 
+   ====================================================================== */ 
+ 
+/* Hides any element. JavaScript adds/removes this class. */ 
+.is-hidden { 
+  display: none; 
+} 
+ 
+/* FAQ accordion */ 
+.faq-item h3 { 
+  cursor: pointer; 
+} 
+ 
+.faq-item.closed p { 
+  display: none; 
+} 
+ 
+/* Product search: message shown when nothing matches */ 
+.no-results { 
+  text-align: center; 
+  margin: 24px 0; 
+  color: #5f6373; 
+} 
+ 
+/* Form: hint under the "Reason for contact" menu */ 
+.type-hint { 
+  margin-bottom: 16px; 
+  font-size: 0.9rem; 
+  color: #5f6373; 
+} 
+ 
+/* Form validation: error text, red borders and the success message */ 
+.error-message { 
+  display: block; 
+  margin-top: 4px; 
+  font-size: 0.875rem; 
+  color: #b3261e; 
+} 
+ 
+.form-group input.input-error, 
+.form-group select.input-error, 
+.form-group textarea.input-error {
+    border-color: #b3261e; 
+} 
+.form-success { 
+margin-top: 12px; 
+padding: 12px 16px; 
+border-radius: 8px; 
+background-color: #e6f4ea; 
+color: #1e6b34; 
+}
