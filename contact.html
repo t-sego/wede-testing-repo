@@ -1,0 +1,173 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Contact | Logo.</title> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font
+awesome/4.7.0/css/font-awesome.min.css"> 
+<link rel="stylesheet" href="css/style.css"> 
+</head> 
+<body> 
+
+<header class="site-header"> 
+  <div class="container header-inner"> 
+    <a href="index.html" class="logo">Logo.</a> 
+ 
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-input"> 
+    <label for="nav-toggle" class="nav-toggle" aria-label="Toggle menu"> 
+      <i class="fa fa-bars icon-open" aria-hidden="true"></i> 
+      <i class="fa fa-times icon-close" aria-hidden="true"></i> 
+    </label> 
+ 
+    <nav class="main-nav" aria-label="Main navigation"> 
+      <ul> 
+        <li><a href="index.html" aria-current="page">Home</a></li> 
+        <li><a href="about_us.html">About Us</a></li> 
+        <li><a href="services.html">Services</a></li> 
+        <li><a href="products.html">Products</a></li> 
+        <li><a href="enquiries.html">Enquiries</a></li> 
+        <li><a href="contact.html">Contact Us</a></li> 
+      </ul> 
+    </nav> 
+  </div> 
+</header>
+
+
+
+<main> 
+  <div class="container"> 
+    <header class="page-header"> 
+      <h1>Contact Us</h1> 
+    </header> 
+ 
+    <div class="form-layout"> 
+ 
+      <section class="form-card"> 
+        <h2>Contact Form</h2> 
+
+        <p class="form-success is-hidden" role="status">Thank you! Your 
+message looks good (this prototype does not send it anywhere yet).</p> 
+<p class="form-note">Static prototype — this form is not yet 
+connected to a real server.</p> 
+        <form action="#" method="post"  novalidate> 
+
+          
+ 
+          <div class="form-group"> 
+            <label for="c-name">Name</label> 
+            <input type="text" id="c-name" name="name" required> 
+          </div> 
+ 
+          <div class="form-group"> 
+            <label for="c-surname">Surname</label> 
+            <input type="text" id="c-surname" name="surname" required> 
+          </div> 
+ 
+          <div class="form-group"> 
+            <label for="c-email">Email</label> 
+            <input type="email" id="c-email" name="email" required 
+placeholder="you@email.com"> 
+          </div> 
+ 
+          <div class="form-group"> 
+            <label for="c-tel">Contact Number</label> 
+            <input type="tel" id="c-tel" name="tel" placeholder="+27 ..."> 
+          </div> 
+ 
+          <div class="form-group"> 
+            <label for="c-message">Message</label> 
+            <textarea id="c-message" name="message" rows="5" 
+placeholder="Message..."></textarea> 
+          </div> 
+ 
+          <button type="submit" class="btn btn-success btn-block"><i class="fa 
+fa-paper-plane" aria-hidden="true"></i>Send</button> 
+          <p class="form-note">Static prototype — this form is not yet 
+connected to a real server.</p> 
+        </form> 
+      </section>
+       <section class="info-card"> 
+        <h2>Location</h2> 
+        <img class="map-image" src="./images/placeholder-wide.svg" alt="Map 
+screenshot or embed"> 
+ 
+        <h3>You can also reach us on:</h3> 
+        <ul class="icon-list"> 
+          <li><i class="fa fa-phone" aria-hidden="true"></i><a 
+href="tel:+27444444444">+27 44 444 4444</a></li> 
+          <li><i class="fa fa-envelope-o" aria-hidden="true"></i><a 
+href="mailto:dummy@email.com">dummy@email.com</a></li> 
+        </ul> 
+ 
+        <h3>Opening Hours</h3> 
+        <ul class="icon-list"> 
+          <li><i class="fa fa-clock-o" aria
+hidden="true"></i><span><strong>Mon &ndash; Fri:</strong> 08:00 &ndash; 
+17:00</span></li> 
+          <li><i class="fa fa-clock-o" aria
+hidden="true"></i><span><strong>Saturday:</strong> 09:00 &ndash; 
+13:00</span></li> 
+          <li><i class="fa fa-clock-o" aria
+hidden="true"></i><span><strong>Sunday:</strong> Closed</span></li> 
+        </ul> 
+ 
+        <ul class="social-list"> 
+          <li><a class="icon-btn" href="#" aria-label="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li> 
+          <li><a class="icon-btn" href="#" aria-label="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li> 
+          <li><a class="icon-btn" href="#" aria-label="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li> 
+          <li><a class="icon-btn" href="#" aria-label="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li> 
+          <li><a class="icon-btn" href="#" aria-label="YouTube"><i class="fa fa-youtube" aria-hidden="true"></i></a></li> 
+          <li><a class="icon-btn" href="#" aria-label="WhatsApp"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li> 
+        </ul> 
+      </section> 
+ 
+    </div> 
+  </div> 
+</main> 
+
+
+  
+
+<footer class="site-footer"> 
+  <div class="container footer-inner"> 
+    <div class="footer-col"> 
+      <p class="logo">Logo.</p> 
+      <ul class="icon-list"> 
+        <li><i class="fa fa-phone" aria-hidden="true"></i><a 
+href="tel:+27444444444">+27 44 444 4444</a></li> 
+        <li><i class="fa fa-envelope-o" aria-hidden="true"></i><a 
+href="mailto:dummy@email.com">dummy@email.com</a></li> 
+        <li><i class="fa fa-map-marker" aria-hidden="true"></i><span>1 
+Placeholder Street, Cape Town</span></li> 
+      </ul> 
+    </div> 
+    <div class="footer-col"> 
+      <h4>Follow</h4> 
+      <ul class="social-list"> 
+        <li><a class="icon-btn" href="#" aria-label="Facebook"><i class="fa 
+fa-facebook" aria-hidden="true"></i></a></li> 
+        <li><a class="icon-btn" href="#" aria-label="Instagram"><i class="fa 
+fa-instagram" aria-hidden="true"></i></a></li> 
+        <li><a class="icon-btn" href="#" aria-label="LinkedIn"><i class="fa 
+fa-linkedin" aria-hidden="true"></i></a></li> 
+        <li><a class="icon-btn" href="#" aria-label="Twitter"><i class="fa fa
+twitter" aria-hidden="true"></i></a></li> 
+        <li><a class="icon-btn" href="#" aria-label="YouTube"><i class="fa fa
+youtube" aria-hidden="true"></i></a></li> 
+        <li><a class="icon-btn" href="#" aria-label="WhatsApp"><i class="fa 
+fa-whatsapp" aria-hidden="true"></i></a></li> 
+      </ul> 
+    </div> 
+  </div> 
+  <p class="copyright">&copy;  <span id="year">2026</span> Logo. All rights reserved. Placeholder 
+template.</p> 
+</footer> 
+
+
+<script src="js/script.js"></script> 
+</body> 
+</html>
+
+</body> 
+</html> 
